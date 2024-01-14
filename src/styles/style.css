@@ -1,0 +1,240 @@
+:root {
+    --SueBlue: #0037AF;
+    --defaultWhite: #ECEFEF;
+    --accentColor: #DD4A00;
+    --SueGradient: linear-gradient(0deg, #000160 0%, #0037AF 100%);
+    /* --SueButtonGradient: linear-gradient(90deg, #3c6eca 0% , #0037AF 100%); */
+    --SueButtonGradient: linear-gradient(90deg, var(--SueBlue) 0%, #0636a8 100%);
+    /* --SueButtonGradient: linear-gradient(90deg, #3c6eca 0%, #486dc4 100% ) ; */
+    --SueButtonGradientHover: linear-gradient(270deg, #DD4A00 0% , #BB4A00 100%);
+    --SueAppBackground: url('https://sue.nl/wp-content/uploads/sites/8/2022/06/particle-fvdm-custome-background-texture-v2.jpg');
+
+}
+
+body {
+    min-height: 100vh;
+    /* background: var(--SueGradient) !important; */
+    background-color: #000160 !important;
+    background: var(--SueAppBackground);
+    background-position: center center;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    margin: auto;
+   
+    font-size: 25px;
+    font-family: 'Nunito', 'Karla' !important;
+} 
+
+a {
+    text-decoration: none !important;
+    color: var(--SueBlue) !important;
+}
+
+.container {
+    max-width: 70% !important;
+}
+
+/* General button styling */
+
+button {
+    border: none;
+    background: var(--linear-gradient(90deg, #F9B000 0%, #D99900 100%));
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: ease-in-out .25s ;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: 'Karla' !important;
+    font-weight: 300 !important;
+    border: 2px solid var(--SueBlue) !important;
+}
+
+.selectDropDown{
+    color: var(--SueBlue) !important;
+    /* margin-bottom: 25px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    width: 300px;
+    border: transparent solid;
+    border-radius: 6px;
+    border-right: 15px solid transparent;
+}
+
+.clickButton {
+    width: 140px;
+    height: 35px;
+    margin-top: 30px;
+    background: var(--SueButtonGradient);
+    color: var(--defaultWhite) !important;
+    /* border-radius: 25px; */
+    border: none !important;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal !important;
+    text-transform: uppercase;
+}
+
+.clickButton:hover {
+    background: var(--SueButtonGradientHover) !important;
+    transition: .5s ease-in-out !important;
+    opacity: 0.9;
+}
+
+/* Typography styling */
+
+h1,h2,h3,p,span {
+    color: var(--SueBlue) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1 {
+    font-size: 48px !important;
+
+}
+
+h2 {
+    font-size: 36px !important;
+    font-weight: 700 !important;
+}
+
+p {
+    font-family: 'Karla' !important;
+    letter-spacing: 3px !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000160 !important;
+    background: var(--SueAppBackground);
+    background-position: center center;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 1s ease-in;
+}
+
+.overlay:hover {
+    cursor: pointer;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+/* Help Modal */
+.helpModal {
+    width: 600px;
+    height: 700px;
+    border: var(--SueBlue) solid 5px;
+    border-radius: 10px;
+    background-color: var(--defaultWhite);
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+.modalTop {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--SueBlue) 2px solid;
+    padding-bottom: 15px !important;
+}
+
+.modalTop .title {
+    font-size: 25px;
+    font-weight: bold !important;
+    color: var(--SueBlue);
+}
+
+.modalTop button {
+    background-color: transparent !important;
+    font-size: 20px;
+    color: var(--SueBlue);
+    border: none !important;
+}
+
+.modalTop:hover button {
+    transform: rotateZ(360deg)  ;
+    transition: 0.5s ease-in-out;
+
+}
+
+.modalBottom {
+    margin-top: 15px;
+}
+
+.modalBottom iframe {
+    width: 100%;
+    height: 575px;
+}
+
+/* Information tooltip */
+
+
+.informationIcon {
+    height: 3% !important;
+    position: relative;
+}
+
+.informationIcon {
+    font-size: 30px;
+    line-height: 1;
+    margin-left: 10px !important;
+    color: var(--accentColor) !important;
+}
+
+.informationIcon:hover {
+    color: var(--defaultWhite) !important;
+    transition: .25s ease-in-out;
+    cursor: pointer;
+}
+
+/* .informationIcon:hover .informationBox, .informationIcon:focus .informationBox {
+    display: block !important;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+} */
+
+.informationBox {
+    display: none;
+    max-width: 400px;
+    height: 400px;
+    max-height: 600px;
+    background-color: var(--defaultWhite);
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    left: 150%;
+    /* margin-left: -60px; */
+    opacity: 1;
+    transition: opacity 0.3s;
+    font-size: 16px;
+    padding: 10px !important;
+    margin-top: -30px !important;
+}
+
+.informationBox iframe {
+    height: 100%;
+
+}
+
+iframe header {
+    display: none !important;
+
+}
+

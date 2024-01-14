@@ -1,0 +1,187 @@
+.topSection {
+    width: 100vw;
+    height: 100px;
+    background-color: var(--defaultWhite);
+}
+
+.topSection .container {
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.topSection img {
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
+    height: 40px;
+    width: auto;
+}
+
+.appTitle {
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    p {
+        height: 40px;
+    }
+
+}
+
+.helpButton {
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    color: var(--SueBlue) !important;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 5px var(--SueBlue);
+    border-radius: 50%;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.helpButton:hover {
+    color: var(--defaultWhite) !important;
+    background-color: var(--SueBlue) !important;
+    transition: 0.5s;
+}
+
+/* Application */
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10vh !important;
+}
+
+.app div {
+    padding: 0;
+    
+    h1, h2, p{
+        color: var(--defaultWhite) !important;
+    }
+}
+
+/* Add Kind */
+.addKind {
+    position: relative;
+}
+
+
+.addKind h2, .generate h2 {
+    color: var(--defaultWhite);
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    padding: 0 !important;
+
+
+}
+
+.buttonAddKind {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    color: var(--accentColor) !important;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder !important;
+    font-size: 40px;
+    opacity: 1;
+    transform: translateX(25%);
+}
+
+.buttonAddKind:hover {
+    transition: 0.25s ease-in-out;
+    opacity: 0.7;
+    transform: rotateX('360deg') .25s;
+}
+
+.addKind button {
+    margin-top: 25px;
+}
+
+.nameKind {
+    height: 30px;
+    margin: auto;
+}
+
+input {
+    height: 30px;
+    width: 300px;
+    padding-left: 15px;
+    color: var(--SueBlue);
+    border: solid transparent;
+    border-radius: 6px;
+}
+
+/* Add buttons below */
+.addButtons {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.buttonAddSubsetting {
+    position: absolute;
+    left: 0;
+}
+
+.buttonAddSetting {
+    position: absolute;
+    right: 0;
+}
+
+
+/* Generate */
+.yamlOverview {
+    margin-top: 25px !important;
+    background-color: var(--defaultWhite);
+    color: var(--SueBlue) !important;
+    /* border: none !important; */
+    border-radius: 6px;
+    padding: 15px !important;
+    height: 400px;
+    max-height: 600px;
+    resize: none;
+
+    p {
+        color: var(--SueBlue) !important;
+    }
+}
+
+/* Title and generate button */
+
+/* Buttons below text area */
+.generateButtons {
+    position: relative;
+}
+
+.deployButtons {
+    position: absolute;
+    right: 0;
+}
+
+.downloadYamlButton, .remoteDeploy {
+    margin-left: 10px;
+}
